@@ -49,7 +49,7 @@ function getItems() {
 	});
 }
 
-function updateItems(id, name, country, weight, metal, condition, rating, comments) {
+function updateItem(id, name, country, weight, metal, condition, rating, comments) {
 	return new Promise(function(resolve, reject) {
 		setTimeout(function() {
 			for (var i = 0; i < items.length; i++) {
@@ -73,5 +73,5 @@ function updateItems(id, name, country, weight, metal, condition, rating, commen
 
 module.exports = {
 	getItems: getItems,
-	updateItems: updateItems
+	updateItem: updateItem
 };

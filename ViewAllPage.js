@@ -1,5 +1,4 @@
 var Context = require("./Context");
-var items=require("items");
 
 function goToEditItem(arg) {
 	var item = arg.data;

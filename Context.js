@@ -26,7 +26,7 @@ function updateItem(id, name, country, weight, metal, condition, rating, comment
 			break;
 		}
 	}
-	Backend.updateItems(id, name, country, weight, metal, condition, rating, comments)
+	Backend.updateItem(id, name, country, weight, metal, condition, rating, comments)
 		.catch(function(error) {
 			console.log("Couldn't update item: " + id);
 		});

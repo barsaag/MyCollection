@@ -26,6 +26,7 @@ module.exports = {
 	metal: metal,
 	condition: condition,
 	rating: rating,
-	comments: comments,
-	goBack: goBack
+	comments: comments
+	cancel: cancel
+	save: save
 };
