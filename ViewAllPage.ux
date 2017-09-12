@@ -1,0 +1,29 @@
+<Page ux:Class="ViewAllPage">
+	<Router ux:Dependency="router"/>
+
+	<JavaScript File="ViewAllPage.js" />
+
+	<StatusBarBackground Dock="Top" />
+	<BottomBarBackground Dock="Bottom" />
+	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
+
+	<Grid Rows="2*,1*">
+		<StackPanel Margin="30">
+			<ScrollView>
+				<StackPanel>
+					<Each Items="{items}">
+						<Button Text="{name}" Clicked="{goToEditItem}">
+							<!-- <Clicked>
+								<Callback Handler="{goToEditItem}"/>
+							</Clicked> -->
+							
+							 <!-- <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Right">&#xf0c6;</Text> -->
+						</Button>
+					</Each>
+				</StackPanel>
+			</ScrollView>
+		</StackPanel>
+		<StackPanel Margin="30">
+		</StackPanel>
+	</Grid>
+</Page>

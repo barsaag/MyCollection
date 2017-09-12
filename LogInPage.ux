@@ -1,0 +1,145 @@
+<Page ux:Class="LogInPage">
+	<Router ux:Dependency="router"/>
+
+	<JavaScript File="LogInPage.js" />
+
+	<StatusBarBackground Dock="Top" />
+	<BottomBarBackground Dock="Bottom" />
+	
+	<Text ux:Class="WhiteText" TextColor="White" />
+
+	<TextInput ux:Class="WhiteTextInput" TextColor="White" PlaceholderColor="#ffffff70" Opacity="0.5">
+	</TextInput>
+
+	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
+	
+	<Panel ux:Class="swipingPanel" BackgroundColor="#000" Margin="5" Height="9" Width="9">
+		<float4 ux:Property="BackgroundColor" />
+
+        <SwipeGesture ux:Name="swipeRight" Type="Auto" Direction="Right" Length="50"/>
+        <SwipingAnimation Source="swipeRight">
+        	<Move Target="TheItem" X="1" Y="0" RelativeTo="Size" Duration="0.5"/>
+        </SwipingAnimation>	
+
+        <SwipeGesture ux:Name="swipeLeft" Type="Auto" Direction="Left" Length="50"/>
+        <SwipingAnimation Source="swipeLeft">
+        	<Move Target="TheItem" X="-1" Y="0" RelativeTo="Size" Duration="0.5"/>
+        </SwipingAnimation>	
+
+        <SwipeGesture ux:Name="swipeBottom" Type="Auto" Direction="Up" Length="50"/>
+        <SwipingAnimation Source="swipeBottom">
+        	<Move Target="TheItem" X="0" Y="-1" RelativeTo="Size" Duration="0.5"/>
+        </SwipingAnimation>	
+
+        <SwipeGesture ux:Name="swipeTop" Type="Auto" Direction="Down" Length="50"/>
+        <SwipingAnimation Source="swipeTop">
+        	<Move Target="TheItem" X="0" Y="1" RelativeTo="Size" Duration="0.5"/>
+        </SwipingAnimation>	
+
+        <Panel ux:Name="TheItem">
+        <Rectangle Layer="Background" Color="{Property this.BackgroundColor}">
+			<Stroke Color="#000"/>
+		</Rectangle>
+	    </Panel>
+
+<!-- 	<WhileHovering>
+	    	<Match Value="{direction}">
+	    		<Case String="Top">
+	    			<ToggleSwipeActive Target="swipeTop" />
+	    		</Case>
+	    		<Case String="Bottom">
+	    			<ToggleSwipeActive Target="swipeBottom" />
+	    		</Case>
+	    		<Case String="Right">
+	    			<ToggleSwipeActive Target="swipeRight" />
+	    		</Case>
+	    		<Case String="Left">
+	    			<ToggleSwipeActive Target="swipeLeft" />
+	    		</Case>
+	    	</Match>
+	    	<ToggleSwipeActive Target="swipeBottom" />
+	    </WhileHovering> -->
+	</Panel>
+
+	<Grid Rows="2*,1*,1*">
+		<StackPanel Margin="140" Alignment="VerticalCenter">
+			<Grid RowCount="5" ColumnCount="5" ContentAlignment="Center">
+				<swipingPanel ux:Name="00"/>
+				<swipingPanel ux:Name="01"/>
+				<swipingPanel ux:Name="02"/>
+				<swipingPanel ux:Name="03"/>
+				<swipingPanel ux:Name="04"/>
+				<swipingPanel ux:Name="10"/>
+				<swipingPanel ux:Name="11"/>
+				<swipingPanel ux:Name="12"/>
+				<swipingPanel ux:Name="13"/>
+				<swipingPanel ux:Name="14"/>
+				<swipingPanel ux:Name="20"/>
+				<swipingPanel ux:Name="21"/>
+				<swipingPanel ux:Name="22"/>
+				<swipingPanel ux:Name="23"/>
+				<swipingPanel ux:Name="24"/>
+				<swipingPanel ux:Name="30"/>
+				<swipingPanel ux:Name="31"/>
+				<swipingPanel ux:Name="32"/>
+				<swipingPanel ux:Name="33"/>
+				<swipingPanel ux:Name="34"/>
+				<swipingPanel ux:Name="40"/>
+				<swipingPanel ux:Name="41"/>
+				<swipingPanel ux:Name="42"/>
+				<swipingPanel ux:Name="43"/>
+				<swipingPanel ux:Name="44"/>
+			</Grid>
+ 			<WhileHovering>
+				<Move Target="00" X="-2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="01" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="02" X="0" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="03" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="04" X="2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="10" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="11" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="12" X="0" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="13" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="14" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="20" X="-2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="21" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="22" X="0" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="23" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="24" X="2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="30" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="31" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="32" X="0" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="33" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="34" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="40" X="-2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="41" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="42" X="0" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="43" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="44" X="2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+			</WhileHovering>
+		</StackPanel>
+		    <Panel Margin="30" Alignment="VerticalCenter">
+		        <WhiteTextInput PlaceholderText="Email@address" Value="{userEmailInput}"/>
+		        <WhiteTextInput PlaceholderText="password" IsPassword="true" Value="{userPasswordInput}"/>
+		        	<!-- Link from JS -->
+		    </Panel>
+		    <StackPanel Alignment="VerticalCenter">
+                <Panel ux:Name="LogIn" Width="75" Height="75" Alignment="TopCenter" Clicked="{goToViewAll}">
+                		<!-- Link from JS -->
+                	<!-- <Clicked>
+                		<Callback Handler="{signInWithEmail}"/>
+                	</Clicked> -->
+                	<Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf084;</Text>
+                	<Circle Color="#64FFFF" />
+                </Panel>
+
+                <Button Alignment="BottomCenter" Text="SignIn" Padding="10" Margin="10" Clicked="{goToViewAll}">
+                		<!-- Link from JS -->
+                	<!-- <Clicked> -->
+                		    <!-- <Callback Handler="{goToViewAll}"/>
+                			<Callback Handler="{createUser}"/>
+                	</Clicked> -->
+                </Button>
+		    </StackPanel>
+	    </Grid>
+</Page>

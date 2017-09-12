@@ -1,0 +1,83 @@
+<Page ux:Class="EditItemPage">
+	<Router ux:Dependency="router"/>
+
+	<JavaScript File="EditItemPage.js" />
+
+	<StatusBarBackground Dock="Top" />
+	<BottomBarBackground Dock="Bottom" />
+
+	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
+
+	<Panel ux:Class="MyLoadingButton" BackgroundColor="#000" Padding="3" Margin="20" Width="60" Height="60">
+		<float4 ux:Property="BackgroundColor" />
+		<Circle Layer="Underlay" Color="#AB2567">
+			<Stroke Color="#000" Width="2"/>
+			<Rectangle ux:Name="rec1" Layer="Background" Color="{Property this.BackgroundColor}" Width="10" Height="10" Opacity="0"> 
+				<Stroke Color="#000"/>
+			</Rectangle>
+			<Rectangle ux:Name="rec2" Layer="Background" Color="{Property this.BackgroundColor}" Width="10" Height="10" Opacity="0"> 
+				<Stroke Color="#000"/>
+			</Rectangle>
+			<Rectangle ux:Name="rec3" Layer="Background" Color="{Property this.BackgroundColor}" Width="10" Height="10" Opacity="0"> 
+				<Stroke Color="#000"/>
+			</Rectangle>
+		</Circle>		
+
+		<WhileHovering>
+			<Change rec1.Opacity="1"/>
+			<Change rec2.Opacity="1"/>
+			<Change rec3.Opacity="1"/>
+			<Scale Target="rec1" Factor="4" Duration="1" Easing="QuadraticIn"/>
+			<Scale Target="rec2" Factor="4" Duration="1" Easing="QuadraticIn"/>
+			<Scale Target="rec3" Factor="4" Duration="1" Easing="QuadraticIn"/>
+			<Rotate Target="rec2" Degrees="30" Duration="0.5"/>
+			<Rotate Target="rec3" Degrees="60" Duration="0.5"/>
+            <Spin Frequency="0.4"/>
+		</WhileHovering>
+	</Panel>
+
+	<Grid Rows="2*,1*">
+		<StackPanel>
+			<Text Value="{name}"/>
+
+			<Text>Name:</Text>
+			<TextBox Value="{name}"/>
+
+			<Text>Country:</Text>
+			<TextBox Value="{country}"/>
+
+			<Text>Wight:</Text>
+			<TextBox Value="{weight}"/>
+
+			<Text>Metal:</Text>
+            <TextBox Value="{metal}"/>
+
+			<Text>Condition:</Text>
+			<TextBox Value="{condition}"/>
+
+			<Text>Rating:</Text>
+			<TextBox Value="{rating}"/>
+
+			<Text>Comments:</Text>
+			<TextView Value="{comments}" TextWrapping="Wrap"/>
+
+		</StackPanel>
+		<StackPanel>
+			<Panel>
+				<MyLoadingButton>
+					<Clicked>
+					    <Callback Handler="{save}" Delay="3"/>
+					</Clicked>
+				</MyLoadingButton> 
+				<Text TextColor="#FFFFFF" Alignment="Center" FontSize="10" Layer="Overlay" Value="Add"/>
+			</Panel>
+			<Panel ux:Name="Cancel" Width="75" Height="75">
+                <Clicked>
+                	<Callback Handler="{cancel}" Delay="3"/>
+                </Clicked>
+                <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf0e2;</Text>
+                <Circle Color="#64FFFF" />
+            </Panel>
+        </StackPanel>
+	</Grid>
+</Page>

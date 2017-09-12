@@ -1,0 +1,13 @@
+<App>
+
+	<Router ux:Name="router"/>
+
+	<Panel>
+		<Navigator DefaultPath="logIn">
+			<LogInPage ux:Template="logIn" router="router"/>
+			<ViewAllPage ux:Template="viewAll" router="router"/>
+			<EditItemPage ux:Template="editItem" router="router"/>
+		</Navigator>	
+	</Panel>
+
+</App>
