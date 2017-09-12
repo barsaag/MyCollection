@@ -64,58 +64,58 @@
 	<Grid Rows="2*,1*,1*">
 		<StackPanel Margin="140" Alignment="VerticalCenter">
 			<Grid RowCount="5" ColumnCount="5" ContentAlignment="Center">
-				<swipingPanel ux:Name="00"/>
-				<swipingPanel ux:Name="01"/>
-				<swipingPanel ux:Name="02"/>
-				<swipingPanel ux:Name="03"/>
-				<swipingPanel ux:Name="04"/>
-				<swipingPanel ux:Name="10"/>
-				<swipingPanel ux:Name="11"/>
-				<swipingPanel ux:Name="12"/>
-				<swipingPanel ux:Name="13"/>
-				<swipingPanel ux:Name="14"/>
-				<swipingPanel ux:Name="20"/>
-				<swipingPanel ux:Name="21"/>
-				<swipingPanel ux:Name="22"/>
-				<swipingPanel ux:Name="23"/>
-				<swipingPanel ux:Name="24"/>
-				<swipingPanel ux:Name="30"/>
-				<swipingPanel ux:Name="31"/>
-				<swipingPanel ux:Name="32"/>
-				<swipingPanel ux:Name="33"/>
-				<swipingPanel ux:Name="34"/>
-				<swipingPanel ux:Name="40"/>
-				<swipingPanel ux:Name="41"/>
-				<swipingPanel ux:Name="42"/>
-				<swipingPanel ux:Name="43"/>
-				<swipingPanel ux:Name="44"/>
+				<swipingPanel ux:Name="a00"/>
+				<swipingPanel ux:Name="a01"/>
+				<swipingPanel ux:Name="a02"/>
+				<swipingPanel ux:Name="a03"/>
+				<swipingPanel ux:Name="a04"/>
+				<swipingPanel ux:Name="a10"/>
+				<swipingPanel ux:Name="a11"/>
+				<swipingPanel ux:Name="a12"/>
+				<swipingPanel ux:Name="a13"/>
+				<swipingPanel ux:Name="a14"/>
+				<swipingPanel ux:Name="a20"/>
+				<swipingPanel ux:Name="a21"/>
+				<swipingPanel ux:Name="a22"/>
+				<swipingPanel ux:Name="a23"/>
+				<swipingPanel ux:Name="a24"/>
+				<swipingPanel ux:Name="a30"/>
+				<swipingPanel ux:Name="a31"/>
+				<swipingPanel ux:Name="a32"/>
+				<swipingPanel ux:Name="a33"/>
+				<swipingPanel ux:Name="a34"/>
+				<swipingPanel ux:Name="a40"/>
+				<swipingPanel ux:Name="a41"/>
+				<swipingPanel ux:Name="a42"/>
+				<swipingPanel ux:Name="a43"/>
+				<swipingPanel ux:Name="a44"/>
 			</Grid>
  			<WhileHovering>
-				<Move Target="00" X="-2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="01" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="02" X="0" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="03" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="04" X="2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="10" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="11" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="12" X="0" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="13" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="14" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="20" X="-2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="21" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="22" X="0" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="23" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="24" X="2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="30" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="31" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="32" X="0" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="33" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="34" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="40" X="-2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="41" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="42" X="0" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="43" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
-				<Move Target="44" X="2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a00" X="-2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a01" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a02" X="0" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a03" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a04" X="2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a10" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a11" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a12" X="0" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a13" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a14" X="1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a20" X="-2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a21" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a22" X="0" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a23" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a24" X="2" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a30" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a31" X="-1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a32" X="0" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a33" X="1" Y="0" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a34" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a40" X="-2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a41" X="-1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a42" X="0" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a43" X="1" Y="1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
+				<Move Target="a44" X="2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
 			</WhileHovering>
 		</StackPanel>
 		    <Panel Margin="30" Alignment="VerticalCenter">
