@@ -5,7 +5,12 @@ function goToEditItem(arg) {
 	router.push("editItem", item);
 }
 
+function goToAddItem() {
+	router.push("addItem");
+}
+
 module.exports = {
 	items: Context.items,
-	goToEditItem: goToEditItem
+	goToEditItem: goToEditItem,
+	goToAddItem: goToAddItem
 }

@@ -24,6 +24,13 @@
 			</ScrollView>
 		</StackPanel>
 		<StackPanel Margin="30">
+			<Panel ux:Name="AddNewItem" Width="60" Height="60">
+                <Clicked>
+                	<Callback Handler="{goToAddItem}" />
+                </Clicked>
+                <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf067;</Text>
+                <Circle Color="#64FFFF" />
+            </Panel>
 		</StackPanel>
 	</Grid>
 </Page>

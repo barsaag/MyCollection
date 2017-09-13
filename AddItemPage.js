@@ -9,13 +9,9 @@ var item = this.Parameter;
 // var rating = item.map(function(x) { return x.rating });
 // var comments = item.map(function(x) { return x.comments });
 
-function cancel(){
-	item.value = item.value;
-	router.goBack();
-}
-
 function save(){
-	Context.updateItem(item.value.id, name.value, country.value, weight.value, metal.value, condition.value, rating.value, comments.value);
+	// Context.updateItem(item.value.id, name.value, country.value, weight.value, metal.value, condition.value, rating.value, comments.value);
+	// Context.updateItem(items.length+1, item.value.id, name.value, country.value, weight.value, metal.value, condition.value, rating.value, comments.value);
 	router.goBack();
 }
 
@@ -27,7 +23,6 @@ module.exports = {
 	// condition: condition,
 	// rating: rating,
 	// comments: comments,
-	cancel: cancel,
 	save: save,
 	item: item
 };

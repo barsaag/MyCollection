@@ -7,6 +7,7 @@
 			<LogInPage ux:Template="logIn" router="router"/>
 			<ViewAllPage ux:Template="viewAll" router="router"/>
 			<EditItemPage ux:Template="editItem" router="router"/>
+			<AddItemPage ux:Template="addItem" router="router"/>
 		</Navigator>	
 	</Panel>
 

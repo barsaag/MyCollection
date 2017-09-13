@@ -1,0 +1,50 @@
+<Page ux:Class="AddItemPage">
+	<Router ux:Dependency="router"/>
+
+	<JavaScript File="AddItemPage.js" />
+
+	<StatusBarBackground Dock="Top" />
+	<BottomBarBackground Dock="Bottom" />
+
+	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
+
+	<Grid Rows="2*,1*">
+		
+			<ScrollView>
+				<StackPanel>
+				<Text Value="{item.name}"/>
+
+				<Text>Name:</Text>
+				<TextBox Value="{item.name}"/>
+
+				<Text>Country:</Text>
+				<TextBox Value="{item.country}"/>
+
+				<Text>Wight:</Text>
+				<TextBox Value="{item.weight}"/>
+
+				<Text>Metal:</Text>
+            	<TextBox Value="{item.metal}"/>
+
+				<Text>Condition:</Text>
+				<TextBox Value="{item.condition}"/>
+
+				<Text>Rating:</Text>
+				<TextBox Value="{item.rating}"/>
+
+				<Text>Comments:</Text>
+				<TextView Value="{item.comments}" TextWrapping="Wrap"/>
+				</StackPanel>
+			</ScrollView>
+		
+		<StackPanel>
+			<Panel ux:Name="AddNewItem" Width="60" Height="60">
+                <Clicked>
+                	<Callback Handler="{save}" />
+                </Clicked>
+                <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf067;</Text>
+                <Circle Color="#64FFFF" />
+            </Panel>
+        </StackPanel>
+	</Grid>
+</Page>

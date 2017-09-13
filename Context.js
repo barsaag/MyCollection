@@ -34,6 +34,5 @@ function updateItem(id, name, country, weight, metal, condition, rating, comment
 
 module.exports = {
 	items: items,
-
 	updateItem: updateItem
 };
