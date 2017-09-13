@@ -49,6 +49,15 @@ function getItems() {
 	});
 }
 
+function addItem(id, name, country, weight, metal, condition, rating, comments){
+	// var newItem = item;
+	// newItem.id=items.length+1;
+	var newid=items.length+1;
+	console.log(newid);
+	console.log(name);
+	items.push({id:newid,name:name,country:country,weight:weight,metal:metal,condition:condition,rating:rating,comments:comments});
+}
+
 function updateItem(id, name, country, weight, metal, condition, rating, comments) {
 	return new Promise(function(resolve, reject) {
 		setTimeout(function() {
@@ -73,5 +82,6 @@ function updateItem(id, name, country, weight, metal, condition, rating, comment
 
 module.exports = {
 	getItems: getItems,
-	updateItem: updateItem
+	updateItem: updateItem,
+	addItem: addItem
 };

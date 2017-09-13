@@ -3,13 +3,18 @@ var Backend = require("./Backend");
 
 var items = Observable();
 
+function sync(){
 Backend.getItems()
 	.then(function(newItems) {
 		items.replaceAll(newItems);
+		// console.log(Object.keys(newItems[6]).join(','));
+		// items.add({name:"test"});
 	})
 	.catch(function(error) {
 		console.log("Couldn't get items: " + error);
-	});
+	});}
+
+sync();
 
 function updateItem(id, name, country, weight, metal, condition, rating, comments) {
 	for (var i = 0; i < items.length; i++) {
@@ -32,7 +37,14 @@ function updateItem(id, name, country, weight, metal, condition, rating, comment
 		});
 }
 
+function addItem(id, name, country, weight, metal, condition, rating, comments){
+	Backend.addItem(id, name, country, weight, metal, condition, rating, comments);
+	sync();
+	// console.log(name);
+}
+
 module.exports = {
 	items: items,
-	updateItem: updateItem
+	updateItem: updateItem,
+	addItem: addItem
 };

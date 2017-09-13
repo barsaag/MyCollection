@@ -12,28 +12,28 @@
 		
 			<ScrollView>
 				<StackPanel>
-				<Text Value="{item.name}"/>
+				<Text Value="{name}"/>
 
 				<Text>Name:</Text>
-				<TextBox Value="{item.name}"/>
+				<TextBox Value="{name}"/>
 
 				<Text>Country:</Text>
-				<TextBox Value="{item.country}"/>
+				<TextBox Value="{country}"/>
 
 				<Text>Wight:</Text>
-				<TextBox Value="{item.weight}"/>
+				<TextBox Value="{weight}"/>
 
 				<Text>Metal:</Text>
-            	<TextBox Value="{item.metal}"/>
+            	<TextBox Value="{metal}"/>
 
 				<Text>Condition:</Text>
-				<TextBox Value="{item.condition}"/>
+				<TextBox Value="{condition}"/>
 
 				<Text>Rating:</Text>
-				<TextBox Value="{item.rating}"/>
+				<TextBox Value="{rating}"/>
 
 				<Text>Comments:</Text>
-				<TextView Value="{item.comments}" TextWrapping="Wrap"/>
+				<TextView Value="{comments}" TextWrapping="Wrap"/>
 				</StackPanel>
 			</ScrollView>
 		

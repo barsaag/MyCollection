@@ -1,13 +1,13 @@
 var Context = require("./Context");
 var item = this.Parameter;
 
-// var name = item.map(function(x) { return x.name });
-// var country = item.map(function(x) { return x.country });
-// var weight = item.map(function(x) { return x.weight });
-// var metal = item.map(function(x) { return x.metal });
-// var condition = item.map(function(x) { return x.condition });
-// var rating = item.map(function(x) { return x.rating });
-// var comments = item.map(function(x) { return x.comments });
+var name = item.map(function(x) { return x.name });
+var country = item.map(function(x) { return x.country });
+var weight = item.map(function(x) { return x.weight });
+var metal = item.map(function(x) { return x.metal });
+var condition = item.map(function(x) { return x.condition });
+var rating = item.map(function(x) { return x.rating });
+var comments = item.map(function(x) { return x.comments });
 
 function cancel(){
 	item.value = item.value;
@@ -20,13 +20,13 @@ function save(){
 }
 
 module.exports = {
-	// name: name,
-	// country: country,
-	// weight: weight,
-	// metal: metal,
-	// condition: condition,
-	// rating: rating,
-	// comments: comments,
+	name: name,
+	country: country,
+	weight: weight,
+	metal: metal,
+	condition: condition,
+	rating: rating,
+	comments: comments,
 	cancel: cancel,
 	save: save,
 	item: item
