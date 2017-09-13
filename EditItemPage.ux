@@ -37,32 +37,43 @@
 	</Panel>
 
 	<Grid Rows="2*,1*">
+		
+			<ScrollView>
+				<StackPanel>
+				<Text Value="{name}"/>
+
+				<Text>Name:</Text>
+				<TextBox Value="{name}"/>
+
+				<Text>Country:</Text>
+				<TextBox Value="{country}"/>
+
+				<Text>Wight:</Text>
+				<TextBox Value="{weight}"/>
+
+				<Text>Metal:</Text>
+            	<TextBox Value="{metal}"/>
+
+				<Text>Condition:</Text>
+				<TextBox Value="{condition}"/>
+
+				<Text>Rating:</Text>
+				<TextBox Value="{rating}"/>
+
+				<Text>Comments:</Text>
+				<TextView Value="{comments}" TextWrapping="Wrap"/>
+				</StackPanel>
+			</ScrollView>
+		
 		<StackPanel>
-			<Text Value="{name}"/>
-
-			<Text>Name:</Text>
-			<TextBox Value="{name}"/>
-
-			<Text>Country:</Text>
-			<TextBox Value="{country}"/>
-
-			<Text>Wight:</Text>
-			<TextBox Value="{weight}"/>
-
-			<Text>Metal:</Text>
-            <TextBox Value="{metal}"/>
-
-			<Text>Condition:</Text>
-			<TextBox Value="{condition}"/>
-
-			<Text>Rating:</Text>
-			<TextBox Value="{rating}"/>
-
-			<Text>Comments:</Text>
-			<TextView Value="{comments}" TextWrapping="Wrap"/>
-
-		</StackPanel>
-		<StackPanel>
+			<Grid Columns="1*,1*">
+			<Panel ux:Name="Cancel" Width="60" Height="60">
+                <Clicked>
+                	<Callback Handler="{cancel}" />
+                </Clicked>
+                <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf0e2;</Text>
+                <Circle Color="#64FFFF" />
+            </Panel>
 			<Panel>
 				<MyLoadingButton>
 					<Clicked>
@@ -71,13 +82,7 @@
 				</MyLoadingButton> 
 				<Text TextColor="#FFFFFF" Alignment="Center" FontSize="10" Layer="Overlay" Value="Add"/>
 			</Panel>
-			<Panel ux:Name="Cancel" Width="75" Height="75">
-                <Clicked>
-                	<Callback Handler="{cancel}" Delay="3"/>
-                </Clicked>
-                <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf0e2;</Text>
-                <Circle Color="#64FFFF" />
-            </Panel>
+            </Grid>
         </StackPanel>
 	</Grid>
 </Page>
