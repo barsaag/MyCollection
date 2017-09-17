@@ -61,8 +61,9 @@
 	    </WhileHovering> -->
 	</Panel>
 
-	<Grid Rows="2*,1*,1*">
-		<StackPanel Margin="140" Alignment="VerticalCenter">
+	<Grid Rows="1*,1*,1*,1*">	
+		<StackPanel Padding="10" Alignment="VerticalCenter" Background="#ff0000">
+			<Panel Width="60" Height="60">
 			<Grid RowCount="5" ColumnCount="5" ContentAlignment="Center">
 				<swipingPanel ux:Name="a00"/>
 				<swipingPanel ux:Name="a01"/>
@@ -90,6 +91,7 @@
 				<swipingPanel ux:Name="a43"/>
 				<swipingPanel ux:Name="a44"/>
 			</Grid>
+			</Panel>
  			<WhileHovering>
 				<Move Target="a00" X="-2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
 				<Move Target="a01" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
@@ -118,28 +120,30 @@
 				<Move Target="a44" X="2" Y="2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
 			</WhileHovering>
 		</StackPanel>
-		    <Panel Margin="30" Alignment="VerticalCenter">
+		    <StackPanel Margin="0" Alignment="VerticalCenter" Background="#00ff00">
 		        <WhiteTextInput PlaceholderText="Email@address" Value="{userEmailInput}"/>
 		        <WhiteTextInput PlaceholderText="password" IsPassword="true" Value="{userPasswordInput}"/>
 		        	<!-- Link from JS -->
-		    </Panel>
-		    <StackPanel Alignment="VerticalCenter">
-                <Panel ux:Name="LogIn" Width="75" Height="75" Alignment="TopCenter" Clicked="{goToViewAll}">
+		    </StackPanel>
+		    <StackPanel Alignment="VerticalCenter" Background="#0000ff">
+                <Panel ux:Name="LogIn" Alignment="TopCenter" Clicked="{goToViewAll}">
                 		<!-- Link from JS -->
                 	<!-- <Clicked>
                 		<Callback Handler="{signInWithEmail}"/>
                 	</Clicked> -->
                 	<Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Center">&#xf084;</Text>
-                	<Circle Color="#64FFFF" />
+                	<Circle Color="#64FFFF" Width="75" Height="75"/>
                 </Panel>
 
-                <Button Alignment="BottomCenter" Text="SignIn" Padding="10" Margin="10" Clicked="{goToViewAll}">
+                <Button Alignment="VerticalCenter" Text="SignIn" Clicked="{goToViewAll}">
                 		<!-- Link from JS -->
                 	<!-- <Clicked> -->
                 		    <!-- <Callback Handler="{goToViewAll}"/>
                 			<Callback Handler="{createUser}"/>
                 	</Clicked> -->
                 </Button>
+		    </StackPanel>
+		    <StackPanel>
 		    </StackPanel>
 	    </Grid>
 </Page>
