@@ -64,6 +64,27 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "editItem";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("addItem", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::AddItemPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "addItem";
+    }
     internal global::Fuse.Navigation.Router router;
     static MainView()
     {
@@ -174,6 +195,7 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(global::AddItemPage.FontAwesome, "FontAwesome");
         global::Uno.UX.Resource.SetGlobalKey(global::EditItemPage.FontAwesome, "FontAwesome");
         global::Uno.UX.Resource.SetGlobalKey(global::LogInPage.FontAwesome, "FontAwesome");
         global::Uno.UX.Resource.SetGlobalKey(global::ViewAllPage.FontAwesome, "FontAwesome");
@@ -208,12 +230,14 @@ public partial class MainView: Fuse.App
         var logIn = new Template(this, this);
         var viewAll = new Template1(this, this);
         var editItem = new Template2(this, this);
+        var addItem = new Template3(this, this);
         router.Name = __selector0;
         temp17.Children.Add(temp18);
         temp18.DefaultPath = "logIn";
         temp18.Templates.Add(logIn);
         temp18.Templates.Add(viewAll);
         temp18.Templates.Add(editItem);
+        temp18.Templates.Add(addItem);
         this.Children.Add(router);
         this.Children.Add(temp17);
     }

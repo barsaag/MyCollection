@@ -8,7 +8,7 @@
 
 	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
 
-	<Grid Rows="2*,1*">
+	<Grid Rows="1*,1*">
 		
 			<ScrollView>
 				<StackPanel>

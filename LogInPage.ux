@@ -63,7 +63,7 @@
 
 	<Grid Rows="1*,1*,1*,1*">	
 		<StackPanel Padding="10" Alignment="VerticalCenter" Background="#ff0000">
-			<Panel Width="60" Height="60">
+			<Panel ux:Name="RPanel" Width="60" Height="60">
 			<Grid RowCount="5" ColumnCount="5" ContentAlignment="Center">
 				<swipingPanel ux:Name="a00"/>
 				<swipingPanel ux:Name="a01"/>
@@ -93,6 +93,7 @@
 			</Grid>
 			</Panel>
  			<WhileHovering>
+ 				<Rotate Target="RPanel" Degrees="45" Duration="0.4"/>
 				<Move Target="a00" X="-2" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
 				<Move Target="a01" X="-1" Y="-1" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>
 				<Move Target="a02" X="0" Y="-2" RelativeTo="Size" Duration="0.2" Easing="CircularIn" EasingBack="CircularOut"/>

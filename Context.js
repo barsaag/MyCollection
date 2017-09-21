@@ -16,6 +16,17 @@ Backend.getItems()
 
 sync();
 
+// Trying to add remove item functionality
+function removeItem(itemToBeRemoved) {
+
+	// next one works
+	//items.removeAt(itemToBeRemoved);
+
+	console.log("Error in Context");
+	Backend.removeItem(itemToBeRemoved);
+	sync();
+}
+
 function updateItem(id, name, country, weight, metal, condition, rating, comments) {
 	for (var i = 0; i < items.length; i++) {
 		var item = items.getAt(i);
@@ -46,5 +57,6 @@ function addItem(id, name, country, weight, metal, condition, rating, comments){
 module.exports = {
 	items: items,
 	updateItem: updateItem,
-	addItem: addItem
+	addItem: addItem,
+	removeItem: removeItem
 };

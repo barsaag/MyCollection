@@ -41,6 +41,8 @@ var items = [
 }
 ];
 
+var newid=items.length;
+
 function getItems() {
 	return new Promise(function(resolve, reject) {
 		setTimeout(function() {
@@ -49,13 +51,41 @@ function getItems() {
 	});
 }
 
+// Trying to add remove item functionality
+function removeItem(itemR) {
+	console.log("Error at Backend Start");
+
+	var itemToBeRemoved = itemR;
+	
+	var updatedItems = [];
+	
+	for (var i = 0; i < items.length; i++) {
+		var item = items[i];
+		
+		if (item.id != itemToBeRemoved) {
+			updatedItems.push(item);
+			//break;
+		}
+	}
+    console.log(updatedItems);
+    items=[];
+
+    for (var j = 0; j < updatedItems.length; j++){
+    	items.push(updatedItems[j]);
+    }
+
+	//items.replaceAll(updatedItems);
+	console.log("Error at Backend End");
+}
+
 function addItem(id, name, country, weight, metal, condition, rating, comments){
-	// var newItem = item;
-	// newItem.id=items.length+1;
-	var newid=items.length+1;
+
+//	var newid=items.length+1;
+
 	console.log(newid);
 	console.log(name);
 	items.push({id:newid,name:name,country:country,weight:weight,metal:metal,condition:condition,rating:rating,comments:comments});
+	newid++;
 }
 
 function updateItem(id, name, country, weight, metal, condition, rating, comments) {
@@ -83,5 +113,6 @@ function updateItem(id, name, country, weight, metal, condition, rating, comment
 module.exports = {
 	getItems: getItems,
 	updateItem: updateItem,
+	removeItem: removeItem,
 	addItem: addItem
 };

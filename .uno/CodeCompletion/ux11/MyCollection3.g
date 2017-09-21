@@ -1,3 +1,4 @@
+.uno/CodeCompletion/ux11/AddItemPage.g.uno
 .uno/CodeCompletion/ux11/EditItemPage.g.uno
 .uno/CodeCompletion/ux11/MyLoadingButton.g.uno
 .uno/CodeCompletion/ux11/LogInPage.g.uno

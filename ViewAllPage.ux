@@ -7,18 +7,20 @@
 	<BottomBarBackground Dock="Bottom" />
 	<Font File="assets/fontawesome-webfont.ttf" ux:Global="FontAwesome" />
 
-	<Grid Rows="2*,1*">
+	<Grid Rows="1*,1*">
 		<StackPanel Margin="30">
 			<ScrollView>
 				<StackPanel>
 					<Each Items="{items}">
-						<Button Text="{name}" Clicked="{goToEditItem}">
-							<!-- <Clicked>
-								<Callback Handler="{goToEditItem}"/>
-							</Clicked> -->
-							
-							 <!-- <Text Font="FontAwesome" FontSize="32" Color="Black" Alignment="Right">&#xf0c6;</Text> -->
-						</Button>
+						<Rectangle Height="50">
+							<Stroke Width="1" Color="Black"/>
+							<StackPanel Alignment="TopCenter">
+								<Button Text="{name}" Clicked="{goToEditItem}"/>
+							</StackPanel>
+							<StackPanel Alignment="BottomCenter">	
+								<Button Text="{id}" Clicked="{goToRemoveItem}"/>
+							</StackPanel>
+					    </Rectangle>
 					</Each>
 				</StackPanel>
 			</ScrollView>
