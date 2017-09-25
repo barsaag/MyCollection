@@ -92,7 +92,7 @@ public partial class AddItemPage: Fuse.Controls.Page
         temp17.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../AddItemPage.js"));
         global::Fuse.Controls.DockPanel.SetDock(temp18, Fuse.Layouts.Dock.Top);
         global::Fuse.Controls.DockPanel.SetDock(temp19, Fuse.Layouts.Dock.Bottom);
-        temp20.Rows = "2*,1*";
+        temp20.Rows = "1*,1*";
         temp20.Children.Add(temp21);
         temp20.Children.Add(temp38);
         temp21.Children.Add(temp22);

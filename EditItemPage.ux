@@ -36,9 +36,10 @@
 		</WhileHovering>
 	</Panel>
 
-	<Grid Rows="2*,1*">
+	<Grid Rows="1*,1*">
 		
-			<ScrollView>
+			<ScrollView Height="250">
+
 				<StackPanel>
 				<Text Value="{name}"/>
 

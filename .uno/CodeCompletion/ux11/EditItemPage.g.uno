@@ -102,9 +102,10 @@ public partial class EditItemPage: Fuse.Controls.Page
         temp18.File = new global::Uno.UX.BundleFileSource(import global::Uno.IO.BundleFile("../../../EditItemPage.js"));
         global::Fuse.Controls.DockPanel.SetDock(temp19, Fuse.Layouts.Dock.Top);
         global::Fuse.Controls.DockPanel.SetDock(temp20, Fuse.Layouts.Dock.Bottom);
-        temp21.Rows = "2*,1*";
+        temp21.Rows = "1*,1*";
         temp21.Children.Add(temp22);
         temp21.Children.Add(temp39);
+        temp22.Height = new Uno.UX.Size(250f, Uno.UX.Unit.Unspecified);
         temp22.Children.Add(temp23);
         temp23.Children.Add(temp);
         temp23.Children.Add(temp25);

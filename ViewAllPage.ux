@@ -13,13 +13,42 @@
 				<StackPanel>
 					<Each Items="{items}">
 						<Rectangle Height="50">
-							<Stroke Width="1" Color="Black"/>
-							<StackPanel Alignment="TopCenter">
+			
+							
+							<Text TextAlignment="Center" Value="{name}"/>
+							<SwipeGesture ux:Name="swipeRight" Direction="Right" Type="Active"/>
+							<SwipeGesture ux:Name="swipeLeft" Direction="Left" Type="Active"/>
+							<SwipingAnimation Source="swipeRight">
+								<Change Target="contents.Color" Value="Green" Easing="ExponentialOut"/>
+							</SwipingAnimation>
+							<SwipingAnimation Source="swipeLeft">
+								<Change Target="contents.Color" Value="Red" Easing="ExponentialOut"/>
+							</SwipingAnimation>
+							<Swiped Source="swipeRight">
+								<Callback Handler="{goToEditItem}"/>
+							</Swiped>
+							<Swiped Source="swipeLeft">
+								<Callback Handler="{goToRemoveItem}"/>
+							</Swiped>
+
+
+							<Panel Background="#fff" ux:Name="contents">
+								<SwipingAnimation Source="swipeRight">
+									<Move X="1" RelativeTo="Size"/>
+								</SwipingAnimation>
+								<SwipingAnimation Source="swipeLeft">
+									<Move X="-1" RelativeTo="Size"/>
+								</SwipingAnimation>
+							</Panel>
+							<!--  -->
+							
+<!-- 							<StackPanel Alignment="TopCenter">
 								<Button Text="{name}" Clicked="{goToEditItem}"/>
 							</StackPanel>
 							<StackPanel Alignment="BottomCenter">	
 								<Button Text="{id}" Clicked="{goToRemoveItem}"/>
-							</StackPanel>
+							</StackPanel> -->
+							
 					    </Rectangle>
 					</Each>
 				</StackPanel>
